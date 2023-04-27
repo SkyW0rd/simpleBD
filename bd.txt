@@ -1,4 +1,7 @@
-0
-val = 1
-1
+[0]
+Hval = 1
+hello = hi
+tri = 4
+val = 33
+[1]
 tri = 2

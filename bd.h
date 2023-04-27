@@ -2,7 +2,6 @@
 #define BD_H
 
 #include <iostream>
-#include <vector>
 #include <map>
 #include <string>
 #include <fstream>
@@ -10,17 +9,19 @@
 
 class bd {
 public:
-	bd();
-	void _select();
-	void _keys();
-	void _set();
-	void _get();
-	void _del();
+	bd(std::string path);
+	void _select(std::string section);
+	void _keys(std::string key);
+	void _set(std::string key, std::string value);
+	std::string _get(std::string key);
+	bool _del(std::string key);
 	void _flushall();
 	void _save();
 	~bd();
 private:
-	std::vector<std::map<std::string, std::string>> _v;
+	std::map<std::string, std::map<std::string, std::string>> _data;
+	std::string _path;
+	std::string _page;
 };
 
 #endif // !BD_H
