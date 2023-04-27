@@ -61,28 +61,35 @@ int main()
 			case 0:
 				a->_select(value);
 				a->_save();
+				std::cout << "-------------------------------------" << std::endl;
 				break;
 			case 1:
 				a->_keys(value);
 				a->_save();
+				std::cout << "-------------------------------------" << std::endl;
 				break;
 			case 2:
 				a->_set(value, setVal);
 				a->_save();
+				std::cout << "-------------------------------------" << std::endl;
 				break;
 			case 3:
 				a->_get(value);
 				a->_save();
+				std::cout << "-------------------------------------" << std::endl;
 				break;
 			case 4:
 				a->_del(value);
 				a->_save();
+				std::cout << "-------------------------------------" << std::endl;
 				break;
 			case 5:
 				a->_flushall();
 				a->_save();
+				std::cout << "-------------------------------------" << std::endl;
 				break;
 		}
+		std::cout << "> ";
 		getline(std::cin, s);
 	}
 
